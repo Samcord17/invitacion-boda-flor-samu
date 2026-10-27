@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensaje y alergenos · Flor & Samu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="mensaje.html">
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="section">
+      <div class="container" style="max-width:760px;">
+        <div class="section-title">
+          <p class="eyebrow">Confirma tu asistencia</p>
+          <h2>Escríbenos un mensaje</h2>
+          <p>Cuéntanos si vienes, con cuántas personas y si tienes alguna alergia o intolerancia. Tu mensaje nos llegará por WhatsApp.</p>
+        </div>
+
+        <div class="card">
+          <form id="msg-form" class="form">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Tu nombre *</label>
+                <input id="name" name="name" type="text" required placeholder="Nombre y apellidos" />
+              </div>
+              <div class="field">
+                <label for="attend">¿Asistirás? *</label>
+                <select id="attend" name="attend" required>
+                  <option value="si">Sí, asistiré con gusto</option>
+                  <option value="no">No podré asistir</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field" id="guests-field">
+              <label for="guests">Número de personas (incluyéndote)</label>
+              <input id="guests" name="guests" type="number" min="1" max="10" value="1" />
+            </div>
+
+            <div class="field">
+              <label for="allergies">Alergias / intolerancias</label>
+              <textarea id="allergies" name="allergies" placeholder="Ej: sin gluten, alergia a frutos secos, intolerancia a la lactosa... (o escribe 'ninguna')"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="message">Mensaje para los novios</label>
+              <textarea id="message" name="message" placeholder="Déjanos unas palabras bonitas..."></textarea>
+            </div>
+
+            <div class="cta-row" style="justify-content:flex-start;">
+              <button type="submit" class="btn btn-whatsapp">Enviar por WhatsApp 💬</button>
+              <button type="button" class="btn btn-email" onclick="sendByEmail()">Enviar por email ✉️</button>
+            </div>
+          </form>
+
+          <div id="msg-success" class="success"></div>
+        </div>
+
+        <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:18px;">
+          Si prefieres, escríbenos directamente a <strong>florysamu@ejemplo.com</strong> o al <strong>+34 600 000 000</strong>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+  <script>
+    function sendByEmail() {
+      const form = document.getElementById('msg-form');
+      const fd = new FormData(form);
+      const name = (fd.get('name')||'').toString().trim() || 'Invitado';
+      const attend = fd.get('attend') === 'si' ? 'Sí, asistiré' : 'No podré asistir';
+      const guests = fd.get('guests') || '1';
+      const allergies = (fd.get('allergies')||'').toString().trim() || 'Sin alergias conocidas';
+      const message = (fd.get('message')||'').toString().trim();
+      const body = `Nombre: ${name}\nAsistencia: ${attend}\nPersonas: ${guests}\nAlergias: ${allergies}\nMensaje: ${message}`;
+      openEmail('Confirmación de asistencia - ' + name, body);
+    }
+  </script>
+</body>
+</html>

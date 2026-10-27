@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encuesta · Flor & Samu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="encuesta.html">
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="section">
+      <div class="container" style="max-width:820px;">
+        <div class="section-title">
+          <p class="eyebrow">Tu opinión cuenta</p>
+          <h2>Encuesta para invitados</h2>
+          <p>Ayúdanos a organizarlo todo al gusto de todos. Tus respuestas nos llegan por WhatsApp y quedan guardadas para ver resultados.</p>
+        </div>
+
+        <form id="survey-form" class="form">
+          <div id="survey-container"></div>
+          <div class="cta-row" style="justify-content:flex-start;">
+            <button type="submit" class="btn btn-whatsapp">Enviar respuestas 💬</button>
+          </div>
+        </form>
+
+        <div id="survey-success" class="success"></div>
+
+        <div class="card mt-4">
+          <h3 class="serif" style="font-size:22px;margin:0 0 8px;">¿Por qué esta encuesta?</h3>
+          <p style="color:var(--muted);margin:0;">Queremos que la boda sea también un poco tuya: menú, música y logística. Gracias por dedicarnos un minuto.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>

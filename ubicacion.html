@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ubicación · Flor & Samu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="ubicacion.html">
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Dónde celebramos</p>
+          <h2>Finca Bodega Las Granadas</h2>
+          <p>Un lugar con encanto entre viñedos y olivos, a pocos minutos del centro de Granada.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div>
+            <div class="map-wrap">
+              <iframe src="https://www.google.com/maps?q=Finca+Bodega+Las+Granadas+Granada&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa del evento"></iframe>
+            </div>
+            <div class="cta-row" style="justify-content:flex-start;margin-top:16px;">
+              <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Finca+Bodega+Las+Granadas+Granada">Abrir en Google Maps</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <ul class="info-list">
+              <li>
+                <span class="ic">📍</span>
+                <div><strong>Dirección</strong><span>Carretera de la Vega, s/n · 18000 Granada</span></div>
+              </li>
+              <li>
+                <span class="ic">🕐</span>
+                <div><strong>Llegada recomendada</strong><span>A partir de las 17:30 h. La ceremonia comienza a las 18:00 h.</span></div>
+              </li>
+              <li>
+                <span class="ic">🚗</span>
+                <div><strong>Cómo llegar en coche</strong><span>Desde Granada, toma la A-92 dirección Almería, salida 238. Aparcamiento gratuito en la finca (200 plazas).</span></div>
+              </li>
+              <li>
+                <span class="ic">🚌</span>
+                <div><strong>Transporte organizado</strong><span>Habrá un autobús desde el centro de Granada (Plaza de las Pasiegas) a las 17:00 h. Confirma tu plaza en la encuesta.</span></div>
+              </li>
+              <li>
+                <span class="ic">🏨</span>
+                <div><strong>Alojamiento</strong><span>Hoteles recomendados: Hotel Alhambra Palace, Palacio de Santa Paula y NH Collection Victoria. Reserva con antelación.</span></div>
+              </li>
+              <li>
+                <span class="ic">👗</span>
+                <div><strong>Nota</strong><span>El evento es al aire libre en parte; lleva algo de abrigo para la noche.</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <h3 class="serif" style="font-size:24px;margin:0 0 10px;">Contacto de la finca</h3>
+          <p style="color:var(--muted);margin:0;">Teléfono: +34 958 000 000 · Email: info@fincabodegalasgranadas.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>

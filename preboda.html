@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preboda · Flor & Samu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="preboda.html">
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="hero" style="padding:60px 0 40px;">
+      <div class="container hero-content">
+        <p class="kicker">El día antes</p>
+        <h1 style="font-size:clamp(36px,6vw,64px);">Preboda</h1>
+        <p class="date-line">Viernes 16 de julio de 2027 · Atardecer en la playa</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="serif" style="font-size:24px;margin:0 0 10px;">Detalles de la preboda</h3>
+            <ul class="info-list">
+              <li>
+                <span class="ic">📅</span>
+                <div><strong>Fecha</strong><span>Viernes 16 de julio de 2027</span></div>
+              </li>
+              <li>
+                <span class="ic">🕐</span>
+                <div><strong>Hora</strong><span>19:30 h (nos vemos al atardecer)</span></div>
+              </li>
+              <li>
+                <span class="ic">📍</span>
+                <div><strong>Lugar</strong><span>Chiringuito El Mirador · Playa de la Herradura, Granada</span></div>
+              </li>
+              <li>
+                <span class="ic">👗</span>
+                <div><strong>Vestimenta</strong><span>Casual de verano: lino, colores claros, sandalias. Nada de tacones.</span></div>
+              </li>
+              <li>
+                <span class="ic">🍹</span>
+                <div><strong>Qué incluye</strong><span>Cóctel de bienvenida, cena informal y música en vivo.</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="serif" style="font-size:24px;margin:0 0 10px;">Confirma tu asistencia a la preboda</h3>
+            <form id="preboda-form" class="form">
+              <div class="field">
+                <label for="pb-name">Tu nombre *</label>
+                <input id="pb-name" name="name" type="text" required placeholder="Nombre y apellidos" />
+              </div>
+              <div class="field">
+                <label for="pb-attend">¿Asistirás? *</label>
+                <select id="pb-attend" name="attend" required>
+                  <option value="si">Sí, asistiré</option>
+                  <option value="no">No podré asistir</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="pb-guests">Número de personas</label>
+                <input id="pb-guests" name="guests" type="number" min="1" max="10" value="1" />
+              </div>
+              <button type="submit" class="btn btn-whatsapp">Confirmar por WhatsApp 💬</button>
+            </form>
+            <div id="preboda-success" class="success"></div>
+          </div>
+        </div>
+
+        <div class="card mt-4 center">
+          <p style="color:var(--muted);margin:0;">La preboda es un evento más íntimo. Si no puedes venir, ¡no te preocupes! Te esperamos el sábado en la boda.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
