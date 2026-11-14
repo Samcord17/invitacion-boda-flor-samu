@@ -5,12 +5,12 @@ const CONFIG = {
   groom: "Samu",
   date: "2027-07-17T18:00:00",
   dateText: "Sábado 17 de julio de 2027",
-  venue: "Finca Bodega Las Granadas",
-  address: "Carretera de la Vega, s/n · 18000 Granada",
+  venue: "Bodegas Las Granadas",
+  address: "Ctra. Trujillo - Guadalupe Km89, 3 · Herguijuela, Trujillo (Cáceres)",
   phone: "+34 600 000 000",
   email: "florysamu@ejemplo.com",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Finca+Bodega+Las+Granadas+Granada",
-  mapsEmbed: "https://www.google.com/maps?q=Finca+Bodega+Las+Granadas+Granada&output=embed",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Bodegas+Las+Granadas+Herguijuela+Trujillo",
+  mapsEmbed: "https://www.google.com/maps?q=Bodegas+Las+Granadas+Herguijuela+Trujillo&output=embed",
   whatsappNumber: "34600000000",
 };
 
