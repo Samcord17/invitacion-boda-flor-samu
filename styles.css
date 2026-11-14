@@ -75,8 +75,8 @@ img { max-width: 100%; display: block; }
   will-change: transform;
 }
 body[data-page="index.html"] .hero-bg { background-image: url("media/salto-gitano.jpg"); }
-body[data-page="ubicacion.html"] .hero-bg { background-image: url("media/jaraicejo.jpg"); }
-body[data-page="preboda.html"] .hero-bg { background-image: url("media/jaraicejo2.webp"); }
+body[data-page="ubicacion.html"] .hero-bg { background-image: url("media/pico-miravete.webp"); }
+body[data-page="preboda.html"] .hero-bg { background-image: url("media/monfrague2.jpg"); }
 body[data-page="mensaje.html"] .hero-bg { background-image: url("media/monfrague2.jpg"); }
 body[data-page="recomendaciones.html"] .hero-bg { background-image: url("media/pico-miravete.webp"); }
 body[data-page="encuesta.html"] .hero-bg { background-image: url("media/jaraicejo.jpg"); }
