@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#dbeaf3"/>
-      <stop offset="1" stop-color="#f2ebe0"/>
+      <stop offset="0" stop-color="#b9d6ea"/>
+      <stop offset="1" stop-color="#f0e3d0"/>
     </linearGradient>
     <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="18"/>
@@ -16,7 +16,7 @@
   <rect width="1200" height="800" fill="url(#sky)"/>
 
   <!-- Manchas de acuarela en el cielo -->
-  <g filter="url(#blur)" opacity="0.5">
+  <g filter="url(#blur)" opacity="0.7">
     <ellipse cx="300" cy="120" rx="220" ry="80" fill="#c9dce8"/>
     <ellipse cx="900" cy="100" rx="260" ry="90" fill="#e6d3b3"/>
     <ellipse cx="600" cy="200" rx="300" ry="70" fill="#d9e6d4"/>
@@ -24,23 +24,23 @@
 
   <!-- Río (Tagus) -->
   <g filter="url(#soft)" opacity="0.7">
-    <path d="M0 620 Q300 580 600 610 T1200 600 L1200 680 Q900 700 600 690 T0 680 Z" fill="#9bbcd4"/>
-    <path d="M0 640 Q400 610 800 650 T1200 630 L1200 700 Q700 720 300 700 T0 700 Z" fill="#7fa6c9" opacity="0.6"/>
+    <path d="M0 620 Q300 580 600 610 T1200 600 L1200 680 Q900 700 600 690 T0 680 Z" fill="#6fa0cc"/>
+    <path d="M0 640 Q400 610 800 650 T1200 630 L1200 700 Q700 720 300 700 T0 700 Z" fill="#4f86b8" opacity="0.7"/>
   </g>
 
   <!-- Acantilado Salto del Gitano (derecha) -->
   <g filter="url(#soft)" opacity="0.85">
-    <path d="M700 260 L820 230 L920 280 L980 360 L1020 500 L980 620 L900 640 L820 600 L760 520 L720 400 Z" fill="#b8935a"/>
-    <path d="M740 300 L860 270 L940 330 L990 420 L960 560 L880 590 L800 560 L760 470 L730 360 Z" fill="#a6834e" opacity="0.7"/>
-    <path d="M780 340 L880 320 L940 380 L960 470 L930 540 L860 560 L800 530 L770 450 Z" fill="#8f7244" opacity="0.6"/>
+    <path d="M700 260 L820 230 L920 280 L980 360 L1020 500 L980 620 L900 640 L820 600 L760 520 L720 400 Z" fill="#c47a4a"/>
+    <path d="M740 300 L860 270 L940 330 L990 420 L960 560 L880 590 L800 560 L760 470 L730 360 Z" fill="#a8623a" opacity="0.75"/>
+    <path d="M780 340 L880 320 L940 380 L960 470 L930 540 L860 560 L800 530 L770 450 Z" fill="#8a4f30" opacity="0.65"/>
   </g>
 
   <!-- Vegetación en el acantilado -->
   <g filter="url(#blur)" opacity="0.7">
-    <ellipse cx="820" cy="300" rx="40" ry="26" fill="#7a8f7b"/>
-    <ellipse cx="900" cy="360" rx="50" ry="30" fill="#6b7f6c"/>
-    <ellipse cx="960" cy="460" rx="45" ry="28" fill="#7a8f7b"/>
-    <ellipse cx="880" cy="520" rx="55" ry="32" fill="#5f7360"/>
+    <ellipse cx="820" cy="300" rx="40" ry="26" fill="#6fa86f"/>
+    <ellipse cx="900" cy="360" rx="50" ry="30" fill="#5d945d"/>
+    <ellipse cx="960" cy="460" rx="45" ry="28" fill="#6fa86f"/>
+    <ellipse cx="880" cy="520" rx="55" ry="32" fill="#4f854f"/>
   </g>
 
   <!-- Acantilado izquierdo (más suave) -->

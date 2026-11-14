@@ -1,7 +1,7 @@
 /* Invitación digital - Flor & Samu */
 :root {
-  --bg: #faf6ef;
-  --bg-2: #f2ebe0;
+  --bg: #f7efe3;
+  --bg-2: #efe3d2;
   --card: #ffffff;
   --ink: #2a241d;
   --muted: #6b6053;
@@ -31,7 +31,7 @@ body::before {
   inset: 0;
   z-index: -1;
   background: url("media/monfrague.svg") center/cover no-repeat;
-  opacity: 0.28;
+  opacity: 0.42;
   pointer-events: none;
 }
 h1, h2, h3, .serif { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: 0.5px; }
