@@ -21,6 +21,7 @@ function renderHeader(active) {
   const pages = [
     { href: "index.html", label: "Inicio" },
     { href: "ubicacion.html", label: "Ubicación" },
+    { href: "recomendaciones.html", label: "Recomendaciones" },
     { href: "mensaje.html", label: "Mensaje" },
     { href: "encuesta.html", label: "Encuesta" },
     { href: "preboda.html", label: "Preboda" },

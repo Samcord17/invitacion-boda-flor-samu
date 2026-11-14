@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recomendaciones · Flor & Samu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="recomendaciones.html">
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Lista de material</p>
+          <h2>Recomendaciones para la boda</h2>
+          <p>Como si de una carrera de trail se tratase: hay material obligatorio y material recomendado. ¡No te olvides de nada!</p>
+        </div>
+
+        <div class="grid grid-2">
+          <!-- Material obligatorio -->
+          <div class="card">
+            <div style="text-align:center;margin-bottom:14px;">
+              <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Material obligatorio">
+                <circle cx="60" cy="60" r="54" fill="#f2ebe0" stroke="#b8935a" stroke-width="2"/>
+                <path d="M60 25 L72 55 L104 55 L78 75 L88 105 L60 85 L32 105 L42 75 L16 55 L48 55 Z" fill="#b8935a" opacity="0.85"/>
+                <text x="60" y="66" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#fff">OBLIG.</text>
+              </svg>
+            </div>
+            <h3 class="serif" style="font-size:24px;margin:0 0 10px;text-align:center;">Material obligatorio</h3>
+            <p style="color:var(--muted);font-size:13px;text-align:center;margin-bottom:14px;">Sin esto no se puede tomar la salida. 🚫</p>
+            <ul class="info-list">
+              <li><span class="ic">🪪</span><div><strong>DNI / identificación</strong><span>Para entrar y para el sorteo, por si acaso.</span></div></li>
+              <li><span class="ic">💃</span><div><strong>Ganas de pasarlo bien</strong><span>Imprescindible. Sin esto no hay carrera.</span></div></li>
+              <li><span class="ic">👟</span><div><strong>Calzado cómodo</strong><span>Hay césped y pista de baile. Mejor sin tacones de aguja.</span></div></li>
+              <li><span class="ic">🧥</span><div><strong>Chaqueta / abrigo</strong><span>La noche en la dehesa refresca. Lleva algo de abrigo.</span></div></li>
+              <li><span class="ic">📱</span><div><strong>Móvil cargado</strong><span>Para fotos, vídeos y para enseñar el WhatsApp de confirmación.</span></div></li>
+            </ul>
+          </div>
+
+          <!-- Material recomendado -->
+          <div class="card">
+            <div style="text-align:center;margin-bottom:14px;">
+              <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Material recomendado">
+                <circle cx="60" cy="60" r="54" fill="#f2ebe0" stroke="#7a8f7b" stroke-width="2"/>
+                <rect x="30" y="40" width="60" height="40" rx="6" fill="#7a8f7b" opacity="0.85"/>
+                <path d="M40 40 L40 30 Q40 22 48 22 L72 22 Q80 22 80 30 L80 40" fill="none" stroke="#7a8f7b" stroke-width="3"/>
+                <text x="60" y="66" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#fff">RECOM.</text>
+              </svg>
+            </div>
+            <h3 class="serif" style="font-size:24px;margin:0 0 10px;text-align:center;">Material recomendado</h3>
+            <p style="color:var(--muted);font-size:13px;text-align:center;margin-bottom:14px;">No es obligatorio, pero te hará la carrera más cómoda. ✅</p>
+            <ul class="info-list">
+              <li><span class="ic">🧥</span><div><strong>Chaquetilla / chal</strong><span>Para la noche y los cambios de temperatura.</span></div></li>
+              <li><span class="ic">🕶️</span><div><strong>Gafas de sol</strong><span>La ceremonia es al aire libre.</span></div></li>
+              <li><span class="ic">🧴</span><div><strong>Protector solar</strong><span>Si vienes pronto, el sol aprieta.</span></div></li>
+              <li><span class="ic">🎁</span><div><strong>Algún detalle para los novios</strong><span>Opcional, pero se agradece.</span></div></li>
+              <li><span class="ic">💃</span><div><strong>Ropa de repuesto</strong><span>Por si la fiesta se alarga (y se alargará).</span></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mt-4 center">
+          <h3 class="serif" style="font-size:22px;margin:0 0 8px;">Consejo de trail</h3>
+          <p style="color:var(--muted);margin:0;">Hidrátate, come bien y, sobre todo, disfruta del recorrido. ¡La meta es celebrar con nosotros!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
