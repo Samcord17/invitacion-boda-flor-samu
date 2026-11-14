@@ -272,6 +272,42 @@ function initPrebodaForm() {
   });
 }
 
+// ---------- Hero slider ----------
+let currentSlide = 0;
+let slideTimer = null;
+function initSlider() {
+  const slider = document.getElementById("hero-slider");
+  if (!slider) return;
+  const slides = slider.querySelectorAll(".slide");
+  const dotsWrap = document.getElementById("slider-dots");
+  if (dotsWrap) {
+    dotsWrap.innerHTML = Array.from(slides).map((_, i) => `<span data-i="${i}" onclick="goSlide(${i})"></span>`).join("");
+  }
+  updateSlider();
+  slideTimer = setInterval(() => goSlide(currentSlide + 1), 5000);
+}
+function updateSlider() {
+  const slider = document.getElementById("hero-slider");
+  if (!slider) return;
+  const slides = slider.querySelectorAll(".slide");
+  const dots = document.querySelectorAll("#slider-dots span");
+  slides.forEach((s, i) => s.classList.toggle("active", i === currentSlide));
+  dots.forEach((d, i) => d.classList.toggle("active", i === currentSlide));
+}
+function goSlide(i) {
+  const slider = document.getElementById("hero-slider");
+  if (!slider) return;
+  const slides = slider.querySelectorAll(".slide");
+  currentSlide = (i + slides.length) % slides.length;
+  updateSlider();
+}
+function slideNext() { goSlide(currentSlide + 1); resetTimer(); }
+function slidePrev() { goSlide(currentSlide - 1); resetTimer(); }
+function resetTimer() {
+  if (slideTimer) clearInterval(slideTimer);
+  slideTimer = setInterval(() => goSlide(currentSlide + 1), 5000);
+}
+
 // ---------- Auto init ----------
 document.addEventListener("DOMContentLoaded", () => {
   // mount layout based on body data-page
@@ -281,4 +317,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initMessageForm();
   initSurvey();
   initPrebodaForm();
+  initSlider();
 });

@@ -15,6 +15,16 @@
 
   <main>
     <section class="hero">
+      <div class="hero-slider" id="hero-slider">
+        <div class="slide active" style="background-image:url('media/salto-gitano.jpg')"></div>
+        <div class="slide" style="background-image:url('media/monfrague2.jpg')"></div>
+        <div class="slide" style="background-image:url('media/pico-miravete.webp')"></div>
+        <div class="slide" style="background-image:url('media/jaraicejo.jpg')"></div>
+        <div class="slide" style="background-image:url('media/jaraicejo2.webp')"></div>
+      </div>
+      <button class="slider-btn prev" type="button" aria-label="Anterior" onclick="slidePrev()">‹</button>
+      <button class="slider-btn next" type="button" aria-label="Siguiente" onclick="slideNext()">›</button>
+      <div class="slider-dots" id="slider-dots"></div>
       <div class="container hero-content">
         <p class="kicker">Nos casamos</p>
         <h1>Flor <span class="amp">&</span> Samu</h1>
