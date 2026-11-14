@@ -330,15 +330,13 @@ function injectFilters() {
   svg.style.position = "absolute";
   svg.innerHTML = "<defs>" +
     "<filter id='drawn' x='-20%' y='-20%' width='140%' height='140%'>" +
-      "<feGaussianBlur in='SourceGraphic' stdDeviation='1.4' result='blur'/>" +
-      "<feColorMatrix in='blur' type='saturate' values='1.8' result='sat'/>" +
+      "<feGaussianBlur in='SourceGraphic' stdDeviation='2.2' result='blur'/>" +
+      "<feColorMatrix in='blur' type='saturate' values='1.3' result='sat'/>" +
       "<feComponentTransfer in='sat' result='poster'>" +
-        "<feFuncR type='discrete' tableValues='0 0.15 0.3 0.45 0.6 0.75 0.9 1'/>" +
-        "<feFuncG type='discrete' tableValues='0 0.15 0.3 0.45 0.6 0.75 0.9 1'/>" +
-        "<feFuncB type='discrete' tableValues='0 0.15 0.3 0.45 0.6 0.75 0.9 1'/>" +
+        "<feFuncR type='discrete' tableValues='0 0.12 0.24 0.36 0.48 0.6 0.72 0.84 0.96 1'/>" +
+        "<feFuncG type='discrete' tableValues='0 0.12 0.24 0.36 0.48 0.6 0.72 0.84 0.96 1'/>" +
+        "<feFuncB type='discrete' tableValues='0 0.12 0.24 0.36 0.48 0.6 0.72 0.84 0.96 1'/>" +
       "</feComponentTransfer>" +
-      "<feConvolveMatrix in='poster' order='3' kernelMatrix='-0.5 -0.5 -0.5 -0.5 5 -0.5 -0.5 -0.5 -0.5' result='edges' preserveAlpha='true'/>" +
-      "<feComposite in='poster' in2='edges' operator='over'/>" +
     "</filter>" +
   "</defs>";
   document.body.appendChild(svg);
