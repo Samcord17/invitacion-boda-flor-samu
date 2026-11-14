@@ -53,7 +53,8 @@
             </div>
 
             <div class="cta-row" style="justify-content:flex-start;">
-              <button type="submit" class="btn btn-whatsapp">Enviar por WhatsApp 💬</button>
+              <button type="button" class="btn btn-whatsapp" onclick="sendWhatsAppNovio()">Whatsapp novio 💬</button>
+              <button type="button" class="btn btn-whatsapp" onclick="sendWhatsAppNovia()">Whatsapp novia 💬</button>
               <button type="button" class="btn btn-email" onclick="sendByEmail()">Enviar por email ✉️</button>
             </div>
           </form>
@@ -71,6 +72,37 @@
   <div id="footer-slot"></div>
   <script src="script.js"></script>
   <script>
+    function buildMsgText() {
+      const form = document.getElementById('msg-form');
+      const fd = new FormData(form);
+      const name = (fd.get('name')||'').toString().trim();
+      if (!name) { alert('Por favor, escribe tu nombre.'); return null; }
+      const attend = fd.get('attend') === 'si' ? 'Sí, asistiré' : 'No podré asistir';
+      const guests = fd.get('guests') || '1';
+      const allergies = (fd.get('allergies')||'').toString().trim() || 'Sin alergias conocidas';
+      const message = (fd.get('message')||'').toString().trim();
+      return [
+        `Hola ${CONFIG.couple}! Soy ${name}.`,
+        `Asistencia: ${attend}.`,
+        fd.get('attend') === 'si' ? `Número de personas: ${guests}.` : '',
+        `Alergias/intolerancias: ${allergies}.`,
+        message ? `Mensaje: ${message}` : '',
+      ].filter(Boolean).join('\\n');
+    }
+    function sendWhatsAppNovio() {
+      const text = buildMsgText();
+      if (!text) return;
+      openWhatsAppTo(CONFIG.whatsappNovio, text);
+      const success = document.getElementById('msg-success');
+      if (success) { success.classList.add('show'); success.textContent = '¡Gracias! Se ha abierto WhatsApp con el novio.'; }
+    }
+    function sendWhatsAppNovia() {
+      const text = buildMsgText();
+      if (!text) return;
+      openWhatsAppTo(CONFIG.whatsappNovia, text);
+      const success = document.getElementById('msg-success');
+      if (success) { success.classList.add('show'); success.textContent = '¡Gracias! Se ha abierto WhatsApp con la novia.'; }
+    }
     function sendByEmail() {
       const form = document.getElementById('msg-form');
       const fd = new FormData(form);
@@ -79,7 +111,7 @@
       const guests = fd.get('guests') || '1';
       const allergies = (fd.get('allergies')||'').toString().trim() || 'Sin alergias conocidas';
       const message = (fd.get('message')||'').toString().trim();
-      const body = `Nombre: ${name}\nAsistencia: ${attend}\nPersonas: ${guests}\nAlergias: ${allergies}\nMensaje: ${message}`;
+      const body = `Nombre: ${name}\\nAsistencia: ${attend}\\nPersonas: ${guests}\\nAlergias: ${allergies}\\nMensaje: ${message}`;
       openEmail('Confirmación de asistencia - ' + name, body);
     }
   </script>

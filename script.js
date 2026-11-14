@@ -8,10 +8,12 @@ const CONFIG = {
   venue: "Bodegas Las Granadas",
   address: "Ctra. Trujillo - Guadalupe Km89, 3 · Herguijuela, Trujillo (Cáceres)",
   phone: "+34 600 000 000",
-  email: "florysamu@ejemplo.com",
+  email: "djsamcord@gmail.com",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Bodegas+Las+Granadas+Herguijuela+Trujillo",
   mapsEmbed: "https://www.google.com/maps?q=Bodegas+Las+Granadas+Herguijuela+Trujillo&output=embed",
-  whatsappNumber: "34600000000",
+  whatsappNumber: "34653727090",
+  whatsappNovio: "34653727090",
+  whatsappNovia: "34610687020",
 };
 
 // ---------- Navigation ----------
@@ -87,7 +89,10 @@ function startCountdown(elId) {
 
 // ---------- WhatsApp / Email ----------
 function openWhatsApp(text) {
-  const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
+  openWhatsAppTo(CONFIG.whatsappNumber, text);
+}
+function openWhatsAppTo(phone, text) {
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
   window.open(url, "_blank", "noopener");
 }
 function openEmail(subject, body) {
