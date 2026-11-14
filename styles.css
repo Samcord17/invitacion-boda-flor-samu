@@ -66,32 +66,28 @@ img { max-width: 100%; display: block; }
   padding: 90px 0 70px; text-align: center;
   background: linear-gradient(180deg, #fdf8f3 0%, #f3ebe0 100%);
 }
-.hero-slider { position: absolute; inset: 0; z-index: 0; }
-.slide {
-  position: absolute; inset: 0;
-  background-size: cover; background-position: center;
-  filter: saturate(1.45) contrast(0.85) brightness(1.05) blur(1.1px);
-  opacity: 0; transition: opacity 1.4s ease;
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: url("media/monfrague.svg") center/cover no-repeat;
+  filter: saturate(1.25) hue-rotate(var(--hero-hue, 0deg)) contrast(0.95) brightness(1.05);
+  opacity: 0.5;
+  transform: translate3d(0,0,0);
+  will-change: transform;
 }
-.slide.active { opacity: 0.5; }
-.slider-btn {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  z-index: 2; width: 42px; height: 42px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.6); background: rgba(255,255,255,0.35);
-  color: var(--ink); font-size: 22px; cursor: pointer; backdrop-filter: blur(4px);
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(253,248,243,0.5) 0%, rgba(253,248,243,0.88) 100%);
+  pointer-events: none;
 }
-.slider-btn.prev { left: 16px; }
-.slider-btn.next { right: 16px; }
-.slider-btn:hover { background: rgba(255,255,255,0.6); }
-.slider-dots {
-  position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
-  z-index: 2; display: flex; gap: 8px;
+.hero-content { position: relative; z-index: 2; }
+.hero h1, .hero .date-line, .hero .venue-line, .hero .kicker {
+  text-shadow: 0 1px 12px rgba(255,255,255,0.9), 0 2px 4px rgba(255,255,255,0.6);
 }
-.slider-dots span {
-  width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.5);
-  cursor: pointer; transition: all .2s;
-}
-.slider-dots span.active { background: var(--gold); transform: scale(1.2); }
+body[data-page="ubicacion.html"] { --hero-hue: -25deg; }
+body[data-page="preboda.html"] { --hero-hue: 35deg; }
+body[data-page="mensaje.html"] { --hero-hue: 60deg; }
+body[data-page="recomendaciones.html"] { --hero-hue: 95deg; }
+body[data-page="encuesta.html"] { --hero-hue: 160deg; }
 .hero::before {
   content: ""; position: absolute; inset: 0; opacity: .08;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><g fill='none' stroke='%23b8935a' stroke-width='0.6'><path d='M60 10 C70 30 90 40 110 60 C90 80 70 90 60 110 C50 90 30 80 10 60 C30 40 50 30 60 10Z'/></g></svg>");

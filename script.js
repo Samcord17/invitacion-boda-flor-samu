@@ -308,6 +308,18 @@ function resetTimer() {
   slideTimer = setInterval(() => goSlide(currentSlide + 1), 5000);
 }
 
+// ---------- Parallax hero background ----------
+function initParallax() {
+  const bg = document.getElementById("hero-bg");
+  if (!bg) return;
+  function update() {
+    const y = window.scrollY || window.pageYOffset || 0;
+    bg.style.transform = "translate3d(0, " + (y * 0.35) + "px, 0)";
+  }
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+}
+
 // ---------- Auto init ----------
 document.addEventListener("DOMContentLoaded", () => {
   // mount layout based on body data-page
@@ -317,5 +329,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initMessageForm();
   initSurvey();
   initPrebodaForm();
-  initSlider();
+  initParallax();
 });
