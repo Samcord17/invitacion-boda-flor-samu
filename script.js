@@ -330,13 +330,9 @@ function injectFilters() {
   svg.style.position = "absolute";
   svg.innerHTML = "<defs>" +
     "<filter id='drawn' x='-20%' y='-20%' width='140%' height='140%'>" +
-      "<feGaussianBlur in='SourceGraphic' stdDeviation='2.2' result='blur'/>" +
-      "<feColorMatrix in='blur' type='saturate' values='1.3' result='sat'/>" +
-      "<feComponentTransfer in='sat' result='poster'>" +
-        "<feFuncR type='discrete' tableValues='0 0.12 0.24 0.36 0.48 0.6 0.72 0.84 0.96 1'/>" +
-        "<feFuncG type='discrete' tableValues='0 0.12 0.24 0.36 0.48 0.6 0.72 0.84 0.96 1'/>" +
-        "<feFuncB type='discrete' tableValues='0 0.12 0.24 0.36 0.48 0.6 0.72 0.84 0.96 1'/>" +
-      "</feComponentTransfer>" +
+      "<feGaussianBlur in='SourceGraphic' stdDeviation='3.5' result='blur'/>" +
+      "<feColorMatrix in='blur' type='saturate' values='1.15' result='sat'/>" +
+      "<feColorMatrix in='sat' type='matrix' values='1 0 0 0 0.02  0 1 0 0 0.02  0 0 1 0 0.02  0 0 0 1 0' result='bright'/>" +
     "</filter>" +
   "</defs>";
   document.body.appendChild(svg);

@@ -70,7 +70,7 @@ img { max-width: 100%; display: block; }
   position: absolute; inset: 0; z-index: 0;
   background: url("media/salto-gitano.jpg") center/cover no-repeat;
   filter: url(#drawn);
-  opacity: 0.38;
+  opacity: 0.32;
   transform: translate3d(0,0,0);
   will-change: transform;
 }
