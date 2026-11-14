@@ -21,10 +21,10 @@ function renderHeader(active) {
   const pages = [
     { href: "index.html", label: "Inicio" },
     { href: "ubicacion.html", label: "Ubicación" },
-    { href: "recomendaciones.html", label: "Recomendaciones" },
-    { href: "mensaje.html", label: "Mensaje" },
-    { href: "encuesta.html", label: "Encuesta" },
     { href: "preboda.html", label: "Preboda" },
+    { href: "mensaje.html", label: "Mensaje" },
+    { href: "recomendaciones.html", label: "Recomendaciones" },
+    { href: "encuesta.html", label: "Encuesta" },
   ];
   const navLinks = pages
     .map(p => `<a href="${p.href}" class="${p.href === active ? 'active' : ''}">${p.label}</a>`)
