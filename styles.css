@@ -68,12 +68,18 @@ img { max-width: 100%; display: block; }
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background: url("media/monfrague.svg") center/cover no-repeat;
-  filter: saturate(1.25) hue-rotate(var(--hero-hue, 0deg)) contrast(0.95) brightness(1.05);
-  opacity: 0.5;
+  background: url("media/salto-gitano.jpg") center/cover no-repeat;
+  filter: url(#drawn);
+  opacity: 0.45;
   transform: translate3d(0,0,0);
   will-change: transform;
 }
+body[data-page="index.html"] .hero-bg { background-image: url("media/salto-gitano.jpg"); }
+body[data-page="ubicacion.html"] .hero-bg { background-image: url("media/jaraicejo.jpg"); }
+body[data-page="preboda.html"] .hero-bg { background-image: url("media/jaraicejo2.webp"); }
+body[data-page="mensaje.html"] .hero-bg { background-image: url("media/monfrague2.jpg"); }
+body[data-page="recomendaciones.html"] .hero-bg { background-image: url("media/pico-miravete.webp"); }
+body[data-page="encuesta.html"] .hero-bg { background-image: url("media/jaraicejo.jpg"); }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(180deg, rgba(253,248,243,0.5) 0%, rgba(253,248,243,0.88) 100%);
