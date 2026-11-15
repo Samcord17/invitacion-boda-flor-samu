@@ -35,42 +35,73 @@ body {
 #envelope-overlay.hidden { opacity: 0; pointer-events: none; }
 .envelope-wrap { text-align: center; }
 .envelope {
-  position: relative; width: 300px; height: 190px;
+  position: relative; width: 340px; height: 220px;
   margin: 0 auto; cursor: pointer;
-  filter: drop-shadow(0 18px 30px rgba(42,36,29,0.18));
+  background: linear-gradient(180deg, #e8dcc4 0%, #d9c9a8 100%);
+  border-radius: 3px;
+  box-shadow: 0 24px 48px rgba(42,36,29,0.28), inset 0 0 80px rgba(120,90,50,0.18);
+  transform: rotate(-1.5deg);
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(120,90,50,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(120,90,50,0.06) 0%, transparent 45%);
+  border: 1px solid #bfae8a;
+}
+.envelope::before {
+  content: ""; position: absolute; inset: 6px;
+  border: 1px dashed rgba(120,90,50,0.35);
+  pointer-events: none;
 }
 .envelope .pocket {
-  position: absolute; bottom: 0; left: 0; right: 0; height: 150px;
-  background: linear-gradient(180deg, #6f8f6f, #5a7a5a);
-  border-radius: 0 0 14px 14px;
+  position: absolute; bottom: 0; left: 0; right: 0; height: 155px;
+  background: linear-gradient(180deg, #e2d4b8, #d2c09e);
+  border-radius: 0 0 3px 3px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .envelope .flap {
-  position: absolute; top: 0; left: 0; right: 0; height: 110px;
-  background: linear-gradient(180deg, #7fa07f, #6f8f6f);
+  position: absolute; top: 0; left: 0; right: 0; height: 125px;
+  background: linear-gradient(180deg, #eadfc6, #ddcea8);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
-  transition: transform 0.7s ease;
+  transition: transform 0.8s ease;
   z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
-.envelope.opening .flap { transform: rotateX(180deg); }
+.envelope.opening .flap { transform: rotateX(175deg); }
 .envelope .seal {
-  position: absolute; top: 95px; left: 50%; transform: translate(-50%, -50%);
-  width: 78px; height: 78px; border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #d4a5a5, #b87a7a);
-  color: #fff; display: flex; align-items: center; justify-content: center;
-  font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 600;
-  text-align: center; line-height: 1.1; letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25), inset 0 2px 4px rgba(255,255,255,0.3);
-  z-index: 3; cursor: pointer;
+  position: absolute; top: 105px; left: 50%; transform: translate(-50%, -50%);
+  width: 86px; height: 86px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #a84a4a, #7a2e2e 60%, #5a1f1f);
+  color: #f4e6c8; display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif; font-size: 12px; font-weight: 600;
+  text-align: center; line-height: 1.05; letter-spacing: 0.5px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35), inset 0 2px 6px rgba(255,255,255,0.15), inset 0 -3px 6px rgba(0,0,0,0.3);
+  z-index: 4; cursor: pointer;
+  border: 2px solid #6a2424;
   transition: transform 0.2s ease;
 }
 .envelope .seal:hover { transform: translate(-50%, -50%) scale(1.06); }
+.envelope .stamp {
+  position: absolute; top: 12px; right: 14px; width: 46px; height: 54px;
+  background: #f4e6c8; border: 1px solid #bfae8a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #7a2e2e;
+  text-align: center; line-height: 1; z-index: 3;
+  background-image: radial-gradient(circle, transparent 3px, #f4e6c8 3.5px);
+  background-size: 8px 8px;
+}
+.envelope .address {
+  position: absolute; bottom: 30px; left: 24px; right: 24px;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: 15px; color: #5a4a30; text-align: center; z-index: 1;
+  letter-spacing: 0.5px;
+}
 .envelope-hint {
-  margin-top: 22px; color: var(--muted); font-size: 14px; letter-spacing: 0.5px;
+  margin-top: 26px; color: var(--muted); font-size: 14px; letter-spacing: 0.5px;
 }
 .envelope-title {
-  font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--gold);
-  margin-bottom: 18px; letter-spacing: 2px;
+  font-family: 'Cormorant Garamond', serif; font-size: 30px; color: var(--gold);
+  margin-bottom: 20px; letter-spacing: 3px;
 }
 
 /* Fondo acuarela deslizable en el hero */

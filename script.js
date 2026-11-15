@@ -319,9 +319,11 @@ function initEnvelope() {
       <div class="envelope" id="envelope">
         <div class="flap"></div>
         <div class="pocket"></div>
-        <div class="seal" id="envelope-seal">Flor<br/>&amp;<br/>Samu</div>
+        <div class="stamp">ESPAÑA<br/>850</div>
+        <div class="address">Para: Flor &amp; Samu<br/>Boda · 17·07·2027</div>
+        <div class="seal" id="envelope-seal">F&amp;S</div>
       </div>
-      <p class="envelope-hint">Toca el sello para abrir la invitación</p>
+      <p class="envelope-hint">Toca el sello de cera para abrir</p>
     </div>`;
   document.body.appendChild(overlay);
   document.body.style.overflow = "hidden";
