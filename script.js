@@ -399,5 +399,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initPrebodaForm();
   initParallax();
   injectFilters();
-  initEnvelope();
 });
