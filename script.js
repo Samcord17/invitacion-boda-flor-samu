@@ -308,6 +308,38 @@ function resetTimer() {
   slideTimer = setInterval(() => goSlide(currentSlide + 1), 5000);
 }
 
+// ---------- Envelope intro ----------
+function initEnvelope() {
+  if (sessionStorage.getItem("envelopeOpened")) return;
+  const overlay = document.createElement("div");
+  overlay.id = "envelope-overlay";
+  overlay.innerHTML = `
+    <div class="envelope-wrap">
+      <p class="envelope-title">Flor & Samu</p>
+      <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="pocket"></div>
+        <div class="seal" id="envelope-seal">Flor<br/>&amp;<br/>Samu</div>
+      </div>
+      <p class="envelope-hint">Toca el sello para abrir la invitación</p>
+    </div>`;
+  document.body.appendChild(overlay);
+  document.body.style.overflow = "hidden";
+  const seal = document.getElementById("envelope-seal");
+  const env = document.getElementById("envelope");
+  function open() {
+    env.classList.add("opening");
+    setTimeout(() => {
+      overlay.classList.add("hidden");
+      document.body.style.overflow = "";
+      sessionStorage.setItem("envelopeOpened", "1");
+      setTimeout(() => overlay.remove(), 800);
+    }, 900);
+  }
+  seal.addEventListener("click", open);
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) open(); });
+}
+
 // ---------- Parallax hero background ----------
 function initParallax() {
   const bg = document.getElementById("hero-bg");
@@ -349,4 +381,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initPrebodaForm();
   initParallax();
   injectFilters();
+  initEnvelope();
 });
