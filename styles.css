@@ -104,6 +104,71 @@ body {
   margin-bottom: 20px; letter-spacing: 3px;
 }
 
+/* Sello de cera a pantalla completa */
+.wax-seal {
+  width: 72vmin; height: 72vmin;
+  max-width: 520px; max-height: 520px;
+  min-width: 260px; min-height: 260px;
+  border-radius: 48% 52% 47% 53% / 50% 48% 52% 50%;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.22) 0%, transparent 35%),
+    radial-gradient(circle at 70% 75%, rgba(0,0,0,0.35) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, #5a8a5a 0%, #3d6b3d 45%, #2a4d2a 75%, #1f3a1f 100%);
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.4),
+    inset 0 6px 20px rgba(255,255,255,0.18),
+    inset 0 -10px 24px rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  cursor: pointer; position: relative;
+  border: 4px solid #1f3a1f;
+  transform: rotate(-4deg);
+  transition: transform 0.9s ease, opacity 0.9s ease;
+  overflow: hidden;
+}
+.wax-seal::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.08) 0%, transparent 25%),
+    radial-gradient(circle at 85% 80%, rgba(0,0,0,0.12) 0%, transparent 30%),
+    radial-gradient(circle at 50% 50%, transparent 60%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none;
+}
+.wax-seal::after {
+  content: ""; position: absolute; inset: 14px;
+  border: 2px dashed rgba(244,230,200,0.35);
+  border-radius: 48% 52% 47% 53% / 50% 48% 52% 50%;
+  pointer-events: none;
+}
+.wax-seal.opening {
+  transform: scale(1.6) rotate(8deg);
+  opacity: 0;
+}
+.seal-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 9vw, 64px);
+  font-weight: 600;
+  color: #f4e6c8;
+  text-align: center; line-height: 0.95;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 -1px 2px rgba(255,255,255,0.25);
+  z-index: 2;
+}
+.seal-sub {
+  margin-top: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(12px, 2.5vw, 16px);
+  color: rgba(244,230,200,0.85);
+  letter-spacing: 3px; text-transform: uppercase;
+  z-index: 2;
+}
+.seal-hint {
+  margin-top: 30px; color: var(--muted); font-size: 14px; letter-spacing: 0.5px;
+}
+.wax-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 26px; color: var(--gold);
+  margin-bottom: 26px; letter-spacing: 3px;
+}
+
 /* Fondo acuarela deslizable en el hero */
 h1, h2, h3, .serif { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: 0.5px; }
 a { color: inherit; text-decoration: none; }
