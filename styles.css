@@ -28,11 +28,41 @@ body {
 /* Sobre de entrada */
 #envelope-overlay {
   position: fixed; inset: 0; z-index: 9999;
-  background: linear-gradient(180deg, #e8f0e6, #fdf8f3);
+  background: url("media/lovers-mountain.svg") center/cover no-repeat;
   display: flex; align-items: center; justify-content: center;
-  transition: opacity 0.7s ease;
+  transition: opacity 0.9s ease;
+  cursor: pointer;
+}
+#envelope-overlay::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(253,248,243,0.3) 0%, rgba(253,248,243,0.78) 100%);
+  pointer-events: none;
 }
 #envelope-overlay.hidden { opacity: 0; pointer-events: none; }
+.lovers-content { position: relative; z-index: 2; text-align: center; padding: 20px; }
+.lovers-title {
+  font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 9vw, 72px);
+  color: var(--ink); letter-spacing: 3px; margin: 0 0 8px;
+  text-shadow: 0 2px 14px rgba(255,255,255,0.9);
+}
+.lovers-sub {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: clamp(16px, 3vw, 22px); color: var(--muted);
+  margin-bottom: 28px; letter-spacing: 1px;
+  text-shadow: 0 1px 8px rgba(255,255,255,0.9);
+}
+.lovers-hint {
+  display: inline-block; padding: 12px 26px; border-radius: 999px;
+  background: rgba(255,255,255,0.6); backdrop-filter: blur(6px);
+  color: var(--ink); font-size: 14px; letter-spacing: 0.5px;
+  border: 1px solid rgba(184,147,90,0.4);
+  box-shadow: 0 6px 18px rgba(42,36,29,0.12);
+  animation: pulse 2.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
 .envelope-wrap { text-align: center; }
 .envelope {
   position: relative; width: 360px; height: 230px;
