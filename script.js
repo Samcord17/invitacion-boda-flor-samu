@@ -315,18 +315,22 @@ function initEnvelope() {
   overlay.id = "envelope-overlay";
   overlay.innerHTML = `
     <div class="envelope-wrap">
-      <p class="wax-title">Flor & Samu</p>
-      <div class="wax-seal" id="envelope-seal">
-        <div class="seal-text">Flor<br/>&amp;<br/>Samu</div>
-        <div class="seal-sub">17 · 07 · 2027</div>
+      <p class="envelope-title">Flor & Samu</p>
+      <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="pocket"></div>
+        <div class="stamp">ESPAÑA<br/>850</div>
+        <div class="address">Para: Flor &amp; Samu<br/>Boda · 17·07·2027</div>
+        <div class="seal" id="envelope-seal">F&amp;S</div>
       </div>
-      <p class="seal-hint">Toca el sello para abrir la invitación</p>
+      <p class="envelope-hint">Toca el sello de cera para abrir</p>
     </div>`;
   document.body.appendChild(overlay);
   document.body.style.overflow = "hidden";
   const seal = document.getElementById("envelope-seal");
+  const env = document.getElementById("envelope");
   function open() {
-    seal.classList.add("opening");
+    env.classList.add("opening");
     setTimeout(() => {
       overlay.classList.add("hidden");
       document.body.style.overflow = "";
