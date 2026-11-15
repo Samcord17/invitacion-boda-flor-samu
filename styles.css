@@ -61,6 +61,7 @@ body {
   background: linear-gradient(180deg, #85a57a, #6f8f65);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
+  transform: rotateX(100deg);
   transition: transform 0.8s ease;
   z-index: 2;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -68,16 +69,16 @@ body {
 .envelope.opening .flap { transform: rotateX(175deg); }
 .envelope .seal {
   position: absolute; top: 110px; left: 50%; transform: translate(-50%, -50%);
-  width: 90px; height: 90px; border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #c45a5a, #8b2e2e 60%, #5a1f1f);
+  width: 96px; height: 96px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #8a5fa8, #6b3a8a 50%, #4a2568 80%, #2e1548);
   color: #f4e6c8; display: flex; align-items: center; justify-content: center;
-  font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 600;
-  text-align: center; line-height: 1.05; letter-spacing: 0.5px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35), inset 0 2px 6px rgba(255,255,255,0.18), inset 0 -3px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4), inset 0 3px 8px rgba(255,255,255,0.15), inset 0 -4px 8px rgba(0,0,0,0.35);
   z-index: 4; cursor: pointer;
-  border: 2px solid #6a2424;
+  border: 2px solid #2e1548;
   transition: transform 0.2s ease;
+  overflow: hidden;
 }
+.envelope .seal svg { display: block; }
 .envelope .seal:hover { transform: translate(-50%, -50%) scale(1.06); }
 .envelope .stamp {
   position: absolute; top: 12px; right: 14px; width: 48px; height: 56px;

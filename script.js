@@ -321,7 +321,21 @@ function initEnvelope() {
         <div class="pocket"></div>
         <div class="stamp">ESPAÑA<br/>850</div>
         <div class="address">Para: Flor &amp; Samu<br/>Boda · 17·07·2027</div>
-        <div class="seal" id="envelope-seal">F&amp;S</div>
+        <div class="seal" id="envelope-seal">
+          <svg viewBox="0 0 100 100" width="74" height="74" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#1a1a1a">
+              <circle cx="50" cy="20" r="7"/>
+              <rect x="47" y="28" width="6" height="26" rx="2"/>
+              <rect x="53" y="22" width="5" height="20" rx="2" transform="rotate(35 53 22)"/>
+              <ellipse cx="70" cy="42" rx="8" ry="11" transform="rotate(20 70 42)"/>
+              <rect x="66" y="28" width="3" height="16" transform="rotate(20 66 28)"/>
+              <rect x="41" y="32" width="5" height="16" rx="2" transform="rotate(-20 41 32)"/>
+              <rect x="45" y="54" width="5" height="20" rx="2" transform="rotate(-8 45 54)"/>
+              <rect x="52" y="54" width="5" height="20" rx="2" transform="rotate(8 52 54)"/>
+            </g>
+            <text x="50" y="90" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="9" font-weight="600" fill="#f4e6c8">Flor &amp; Samu</text>
+          </svg>
+        </div>
       </div>
       <p class="envelope-hint">Toca el sello de cera para abrir</p>
     </div>`;
